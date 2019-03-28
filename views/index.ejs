@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
@@ -17,57 +18,44 @@
         <form class="needs-validation" novalidate action="/" method="post" id="form">
             <div class="form-row">
                 <div class="col-md-3 mb-3">
-                    <label for="username">Username</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        </div>
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Username" aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">
-                            This field is empty
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
                     <label for="email">Email</label>
+
                     <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                     <div class="invalid-feedback">
-                        It's not a valid email
+                        Email is invalid!
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username"
+                           aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
-                        At least 8 characters in password
+                        Field cannot be empty!
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                           required>
+                    <div class="invalid-feedback">
+                        Password must consist of at least 8 characters!
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="password2">Confirm password</label>
                     <input type="password" class="form-control" id="password2" placeholder="Confirm password" required>
                     <div class="invalid-feedback">
-                        Passwords are not equal
+                        Passwords must match!
                     </div>
                 </div>
             </div>
             <input class="btn btn-primary" type="submit" id="validate" value="Submit form">
         </form>
-
-    </div>
-
-    <div class="message-container container col-12">
-        <form action="/sendEmails" method="post">
-            <div class="form-group">
-                <label for="message">Messag</label>
-                <input class="form-control" id="message" aria-describedby="msgHelp" placeholder="Enter message" name="msg">
-                <small id="msgHelp" class="form-text text-muted">Enter message that you want to send to all of your users.</small>
-            </div>
-            <button type="submit" class="btn btn-primary">Send message!</button>
-        </form>
     </div>
 
     <div class="table-container container col-12">
-        <h2>All users</h2>
+        <h2 class="allUsersText">All users</h2>
         <table class="table table-hover">
             <thead>
             <tr>
@@ -87,13 +75,23 @@
             </tbody>
         </table>
     </div>
+
+    <a href="/emails" class="btn btn-primary">
+        Send some emails
+    </a>
 </div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 <script src="js/main.js"></script>
 </body>

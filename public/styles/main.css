@@ -1,4 +1,64 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=background-blur-clean-531880.jpg&fm=jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+* {
+    color: #fff
+}
+
 .container {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.table-container {
+    background-color: rgba(48, 180, 240, 0.55);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.allUsersText {
+    text-align: center;
+}
+
+.form-container {
+    background-color: rgba(44, 240, 189, 0.55);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.messageInput {
+    padding: 30px 20px;
+    filter: drop-shadow(3px 2px 4px #cbc100);
+}
+
+.messageLabel {
+    color: #fff;
+    font-size: 5em;
+    filter: drop-shadow(3px 2px 4px #50cb4d);
+    text-align: center;
+    width: 100%;
+}
+
+.messageHandler {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sendMessageButton {
+    align-self: center;
+    padding: 10px;
+}
+
+.sendText {
+    font-size: 2em;
 }
